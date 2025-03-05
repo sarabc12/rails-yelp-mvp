@@ -2,3 +2,16 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.category %></p>
 <%= link_to "Back to list", restaurants_path, class: "btn btn-primary"%>
+<% @restaurant.reviews.each do |review| %>
+<ul>
+<li><%= review.content %></li>
+</ul>
+<% end %>
+
+<h1>New review</h1>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+
