@@ -4,7 +4,7 @@
 <%= link_to "Back to list", restaurants_path, class: "btn btn-primary"%>
 <% @restaurant.reviews.each do |review| %>
 <ul>
-<li><%= review.content %></li>
+ <li><%= review.content %></li>
 </ul>
 <% end %>
 
@@ -14,4 +14,3 @@
   <%= f.input :content %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>
-

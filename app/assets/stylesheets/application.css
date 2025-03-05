@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ .restaurantContainer {
+  text-align: center;
+ }
+
+ .restaurants a {
+  text-decoration: none;
+ }
+
+ .listRestaurant ul {
+  list-style: none;
+ }
